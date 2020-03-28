@@ -257,3 +257,7 @@ a {
 	background: var(--color);
 	color: var(--colorLight);
 }
+
+.craete-Code {
+	width: 100%;
+}
