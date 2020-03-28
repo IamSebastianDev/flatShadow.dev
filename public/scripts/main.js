@@ -52,10 +52,10 @@ const copy = () => {
 		data.select();
 		data.setSelectionRange(0, 99999); /*For mobile devices*/
 
-		data.remove();
-
 		/* Copy the text inside the text field */
 		document.execCommand('copy');
+
+		data.remove();
 	}
 };
 
