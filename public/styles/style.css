@@ -230,7 +230,7 @@ a {
 	background: var(--colorLight);
 	color: var(--colorDark);
 
-	padding: 5px 20px;
+	padding: 0px 15px;
 	border-radius: 5px;
 }
 
@@ -258,6 +258,8 @@ a {
 	color: var(--colorLight);
 }
 
-.craete-Code {
+.create-Code {
 	width: 100%;
+
+	font-size: 1.6rem;
 }
