@@ -668,7 +668,9 @@ footer a:hover {
 	}
 
 	.create-Code div {
+		font-size: 1.2rem;
 		width: unset;
+		word-break: break-word;
 	}
 
 	.attributes-Wrapper {
