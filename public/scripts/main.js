@@ -52,7 +52,24 @@ const copy = () => {
 		data.select();
 		data.setSelectionRange(0, 99999); /*For mobile devices*/
 
+		data.remove();
+
 		/* Copy the text inside the text field */
 		document.execCommand('copy');
 	}
 };
+
+// menu
+
+let menu = document.querySelector('.nav-Menu ul');
+
+window.addEventListener('click', event => {
+	if (event.target.closest('.nav-Button')) {
+		menu.style.transform = 'translateY(0)';
+		document.querySelector('body').style.overflowY = 'hidden';
+	}
+	if (event.target.closest('.nav-ButtonClose')) {
+		menu.style.transform = 'translateY(-100%)';
+		document.querySelector('body').style.overflowY = 'auto';
+	}
+});

@@ -156,6 +156,10 @@ class FlatShadow {
 			}
 		});
 
+		if (this.elementToAttachTo.childNodes.length === 0) {
+			textNode = false;
+		}
+
 		return textNode;
 	}
 

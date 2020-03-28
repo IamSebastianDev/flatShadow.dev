@@ -13,40 +13,31 @@
 		></script>
 	</head>
 	<body>
-		<nav class="nav-Bar">
-			<button
-				class="nav-Button flatShadow"
-				flatshadowhover="true"
-				flatshadowcolor="rgba(235,235,235,1)"
-				flatshadowlength="5"
-				flatshadowblur="5"
-				flatshadowangle="0"
-			>
+		<nav class="nav-Menu">
+			<ul>
+                <li><a href="index.html">Home</a></li>
+				<li>
+					<a style="color: var(--color);" href="index.html#install"
+						>Get flatShadow</a
+					>
+				</li>
+				<li>
+					<a href="index.html#attributes" Attributes>Attributes</a>
+				</li>
+				<li><a href="./examples.html">Examples</a></li>
+				<li></li><button class="nav-ButtonClose">&times;</button></li>
+				<li>
+					<a href="https://github.com/monsterteddy"
+						><img src="./assets/icon/github.svg"
+					/></a>
+				</li>
+			</ul>
+
+			<button class="nav-Button">
 				<img src="./assets/icon/menu.svg" />
 			</button>
-			<a
-				class="nav-Button flatShadow"
-				flatshadowhover="true"
-				flatshadowcolor="rgba(235,235,235,1)"
-				flatshadowlength="5"
-				flatshadowblur="5"
-				flatshadowangle="0"
-				target_blank
-				href="https://github.com/monsterteddy"
-				><img src="./assets/icon/github.svg"
-			/></a>
-			<a
-				class="nav-Button flatShadow"
-				flatshadowhover="true"
-				flatshadowcolor="rgba(235,235,235,1)"
-				flatshadowlength="5"
-				flatshadowblur="5"
-				flatshadowangle="0"
-				target="_blank"
-				href="https://twitter.com/monsterteddy"
-				><img src="./assets/icon/twitter.svg"
-			/></a>
 		</nav>
+	
 
 		<div class="scroll-Container">
 			<p>scroll</p>
@@ -109,7 +100,7 @@
 				>
 				<a
 					target="_blank"
-					href=""
+					href="https://github.com/MonsterTeddy/flatShadow.js"
 					class="flatShadow create-Button"
 					flatshadowHover="true"
 					flatshadowLength="40"
@@ -154,7 +145,7 @@
 					<p>
 						Shadows added this way can be styled with custom
 						attributes.
-						<a href="#angle">Learn more about attributes</a>.
+						<a href="#attributes">Learn more about attributes</a>.
 					</p>
 					<div>
 						<span>
@@ -314,9 +305,9 @@
 				>
 				<p class="attributes-Desc">
 					The step size attribute sets the space between the
-					calculated steps. The default value is 1, which means about
-					1px per step. You can increase this to get a more stylistic
-					looking shadow or to increase perfomance.
+					calculated steps. The default value is 2, which means about
+					2px per step. You can increase this to get a more stylistic
+					looking shadow or to increase perfomance. The amount of shadows drawn is calculated by dividing the length through the step.
 				</p>
 			</section>
 			<section id="blur" class="attributes-Wrapper attributes-Example">
@@ -340,7 +331,7 @@
 				<p class="attributes-Desc">
 					The blur attribute describes the blur radius of the shadow,
 					or the softness. The default is 0, this creates a sharp
-					shadow.
+					shadow. Increase the blur to soften the shadows edges.
 				</p>
 			</section>
 			<section id="color" class="attributes-Wrapper attributes-Example">
@@ -388,7 +379,7 @@
 					></span
 				>
 				<p class="attributes-Desc">
-					Set the hover attribute to true to have the shadow only appear on a hover. The default is false.
+					Set the hover attribute to true to have the shadow only appear on a hover. The default is false. If you want to transition the hover, you can add the transition using normal CSS rules. 
 				</p>
 			</section>
 			<section id="tracking" class="attributes-Wrapper attributes-Example">
@@ -447,7 +438,11 @@
 			</section>
 		</main>
 		<footer>
-
+			<a class="flatShadow" class="flatShadow create-Button"
+			flatshadowHover="true"
+			flatshadowLength="50"
+			flatshadowColor="hsla(0, 45%, 30%, 1)" href="./examples.html">Take a look at some examples.</a>
+			<span>&copy; 2020 Sebastian Heinz</span>
 		</footer>
 	</body>
 </html>

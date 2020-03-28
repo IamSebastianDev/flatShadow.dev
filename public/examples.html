@@ -1,0 +1,131 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>FlatShadows.js | Small JS Library for stylistic shadows</title>
+		<link rel="stylesheet" href="./styles/style.css" />
+		<script
+			type="application/javascript"
+			src="./dist/flatShadow.js"
+		></script>
+	</head>
+	<body>
+		<nav class="nav-Menu">
+			<ul>
+                <li><a href="index.html">Home</a></li>
+				<li>
+					<a style="color: var(--color);" href="index.html#install"
+						>Get flatShadow</a
+					>
+				</li>
+				<li>
+					<a href="index.html#attributes" Attributes>Attributes</a>
+				</li>
+				<li><a href="./examples.html">Examples</a></li>
+				<li></li><button class="nav-ButtonClose">&times;</button></li>
+				<li>
+					<a href="https://github.com/monsterteddy"
+						><img src="./assets/icon/github.svg"
+					/></a>
+				</li>
+			</ul>
+
+			<button class="nav-Button">
+				<img src="./assets/icon/menu.svg" />
+			</button>
+		</nav>
+
+		<main>
+			<section class="examples-Grid">
+				<div class="example-Container">
+					<h1>Angle = 315deg</h1>
+					<div
+						class="example-Box flatShadow"
+						flatshadowAngle="315deg"
+					></div>
+				</div>
+				<div class="example-Container">
+					<h1>Length = 20px</h1>
+					<div
+						class="example-Box flatShadow"
+						flatshadowLength="20"
+					></div>
+				</div>
+				<div class="example-Container">
+					<h1>Step Size = 10px</h1>
+					<div
+						class="example-Box flatShadow"
+						flatshadowAngle="25deg"
+						flatshadowStepSize="10"
+					></div>
+				</div>
+				<div class="example-Container">
+					<h1>Blur = 10px</h1>
+					<div
+						class="example-Box flatShadow"
+						flatshadowAngle="25deg"
+						flatshadowBlur="10"
+					></div>
+				</div>
+				<div class="example-Container">
+					<h1>Color = "hsla(120, 45%, 50%, 0.3)"</h1>
+					<div
+						class="example-Box flatShadow"
+						flatshadowAngle="75deg"
+						flatshadowLength="30"
+						flatshadowColor="hsla(120, 45%, 50%, 0.3)"
+					></div>
+				</div>
+				<div class="example-Container">
+					<h1>Hover = true</h1>
+					<div
+						class="example-Box flatShadow"
+						flatshadowAngle="75deg"
+						flatshadowHover="true"
+					></div>
+				</div>
+				<div class="example-Container">
+					<h1>Tracking = true</h1>
+					<div
+						class="example-Box flatShadow"
+						flatshadowstepsize="4"
+						flatshadowlength="20"
+						flatshadowenabletracking="true"
+					></div>
+				</div>
+
+				<div class="example-Container">
+					<h1>Force Text = true</h1>
+					<div
+						class="example-Box flatShadow"
+						flatshadowforcetext="true"
+						flatshadowblur="2"
+						flatshadowstepsize="1"
+						flatshadowlength="200"
+						flatshadowColor="hsla(210, 25%, 5%, 1)"
+					>
+						Hi!
+					</div>
+				</div>
+				<div class="example-Container">
+					<h1
+						class="flatShadow"
+						flatshadowenabletracking="true"
+						flatshadowlength="20"
+						flatshadowblur="3"
+						flatshadowcolor="rgba(0,0,0,0.1)"
+					>
+						Tracking Text!
+					</h1>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<span>&copy; 2020 Sebastian Heinz</span>
+		</footer>
+	</body>
+</html>
+<script src="./scripts/main.js"></script>
