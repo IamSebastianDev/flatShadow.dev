@@ -631,13 +631,17 @@ footer a:hover {
 		grid-template-rows: auto;
 	}
 
+	#copyButton {
+		display: none;
+	}
+
 	.hero {
 		height: unset;
 	}
 
 	.hero-TitleContainer {
 		font-size: 16px;
-		margin-top: 50px;
+		margin-top: 100px;
 		padding: 10px 30px;
 	}
 	.hero-TitleContainer h1 {
