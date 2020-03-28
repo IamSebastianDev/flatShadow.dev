@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="./styles/style.css" />
 		<script
 			type="application/javascript"
-			src="https://flatshadow.now.sh/dist/flatShadow.js"
+			src="./dist/flatShadow.js"
 		></script>
 	</head>
 	<body>
@@ -62,7 +62,7 @@
 			</div>
 
 			<div class="hero-LinksContainer">
-				<p>Learn more about the properties.</p>
+				<p>Learn more about the Attributes.</p>
 				<a href="#creating">Creating a Shadow</a>
 				<a href="#angle">Angle</a>
 				<a href="#length">Length</a>
@@ -75,34 +75,99 @@
 				<a href="#forceText">Force Text Shadow</a>
 			</div>
 		</main>
-		<div id="creating" class="container create-Container">
+		<div id="install" class="container create-Container">
 			<div class="create-Wrapper">
 				<h1>Get flatShadow</h1>
 				<a
 					download="flatShadow.min.js"
 					href="./flatShadow.min.js"
-					class="flatShadow"
+					class="flatShadow create-Button"
 					flatshadowHover="true"
+					flatshadowLength="40"
 					flatshadowColor="hsla(0, 45%, 30%, 1)"
 					>Download the minified file.</a
 				>
 				<a
 					target="_blank"
 					href=""
-					class="flatShadow"
+					class="flatShadow create-Button"
 					flatshadowHover="true"
+					flatshadowLength="40"
 					flatshadowColor="hsla(0, 45%, 30%, 1)"
 					>Fork from GitHub.</a
 				>
 				<div class="create-Code">
 					<p>Or include this link in your project.</p>
-					<pre>
-				<code>
-&lt;script src="https://flatshadow.now.sh/dist/flatShadow.min.js"&gt;&lt;/script&gt;</code>
-			</pre>
+
+					<div>
+						<span>
+							&lt;script
+							<span style="color: steelblue;">src=</span
+							><span style="color: indianred;"
+								>"https://flatshadow.now.sh/dist/flatShadow.min.js"</span
+							>&gt;&lt;/script&gt;
+						</span>
+						<button onlick="copy()">
+							<img src="assets/icon/copy.svg" />
+							<span>Copy.</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="creating" class="container create-Container">
+			<div class="create-Wrapper">
+				<h1>Creating a Shadow</h1>
+				<div class="create-Code">
+					<p>
+						You can add a shadow on any HTML element just like this:
+					</p>
+					<div>
+						<span>
+							&lt;h1 <span style="color: steelblue;">class=</span
+							><span style="color: indianred;">"flatShadow"</span
+							>&gt;I'll have a shadow!&lt;/h1&gt;</span
+						>
+					</div>
+				</div>
+				<div class="create-Code">
+					<p>
+						Shadows added this way can be styled with custom
+						attributes.
+						<a href="#angle">Learn more about attributes</a>.
+					</p>
+					<div>
+						<span>
+							&lt;h1
+							<span style="color: steelblue;">class=</span
+							><span style="color: indianred;">"flatShadow"</span>
+							<span style="color: steelblue;"
+								>flatShadowAngle=</span
+							><span style="color: indianred;">"45deg"</span>
+							<span style="color: steelblue;"
+								>flatShadowBlur=</span
+							><span style="color: indianred;">"4"</span>&gt;
+						</span>
+					</div>
 				</div>
 			</div>
 		</div>
 	</body>
 </html>
 <script src="./scripts/main.js"></script>
+<script>
+	const copy = () => {
+		let string = 'src="https://flatshadow.now.sh/dist/flatShadow.min.js">';
+
+		let data = [
+			new ClipboardItem({
+				'text/plain': new Blob(
+					["<script src='" + string + "'><%2fscript>"],
+					{ type: 'text/plain' }
+				)
+			})
+		];
+
+		navigator.clipboard.write(data);
+	};
+</script>

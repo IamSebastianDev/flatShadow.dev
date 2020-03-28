@@ -226,15 +226,7 @@ a {
 	width: 100%;
 }
 
-.create-Container pre {
-	background: var(--colorLight);
-	color: var(--colorDark);
-
-	padding: 0px 15px;
-	border-radius: 5px;
-}
-
-.create-Container a {
+.create-Button {
 	padding: 12px 18px;
 	margin: 10px 10px 10px 0;
 
@@ -249,17 +241,80 @@ a {
 	border-radius: 5px;
 
 	overflow: hidden;
-
-	transition: 0.25s ease;
 }
 
-.create-Container a:hover {
+.create-Button:hover {
 	background: var(--color);
 	color: var(--colorLight);
 }
 
 .create-Code {
+	margin: 10px 0px;
 	width: 100%;
 
 	font-size: 1.6rem;
+}
+
+.create-Code div {
+	background: var(--colorLight);
+	color: var(--colorDark);
+
+	font: 1.4rem monospace;
+
+	width: 100%;
+
+	padding: 10px 15px;
+	border-radius: 5px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.create-Code button {
+	height: 40px;
+	max-width: 40px;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+
+	margin: 0;
+	margin-left: 20px;
+	padding: 0;
+
+	overflow: hidden;
+
+	background: none;
+	border: none;
+	font: 1.2rem 'roboto', sans-serif;
+
+	cursor: pointer;
+
+	transition: 0.3s ease-out;
+
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.create-Code button:hover {
+	max-width: 500px;
+}
+
+.create-Code button img {
+	margin: 10px 10px;
+	height: 20px;
+	width: 20px;
+}
+
+.create-Code button span {
+	margin: 0 10px 0 0;
+	padding: 0;
+
+	align-self: center;
+}
+
+.create-Code a {
+	color: var(--colorLight);
 }
