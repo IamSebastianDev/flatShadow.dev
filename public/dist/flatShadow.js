@@ -94,6 +94,10 @@ class FlatShadow {
 			? attributes.getNamedItem('flatshadowhover').value
 			: false;
 
+		this.forceText = attributes.getNamedItem('flatshadowforcetext')
+			? attributes.getNamedItem('flatshadowforcetext').value
+			: false;
+
 		// if a options catalogue is provided, override the values provided in the catalogue
 		if (options) {
 			options.angle ? (this.angle = options.angle) : null;
@@ -102,11 +106,9 @@ class FlatShadow {
 
 			options.blur ? (this.blur = options.blur) : null;
 
-			options.shadowLength
-				? (this.shadowLength = options.shadowLength)
-				: null;
+			options['length'] ? (this.shadowLength = options['length']) : null;
 
-			options.step ? (this.step = options.step) : null;
+			options.stepSize ? (this.step = options.stepSize) : null;
 
 			options.enableTracking
 				? (this.trackingEnabled = options.enableTracking)
@@ -117,6 +119,8 @@ class FlatShadow {
 				: null;
 
 			options.hover ? (this.hover = options.hover) : null;
+
+			options.forceText ? (this.forceText = optios.forceText) : null;
 		}
 
 		// call the inital paint
@@ -193,7 +197,11 @@ class FlatShadow {
 			).textContent = `[data-fsid="${this.fsid}"]${
 				this.hover ? ':hover' : ''
 			}{
-						 ${this.isTextNode ? 'text-shadow: ' : 'box-shadow: '}${shadow()} !important;
+						 ${
+								this.isTextNode || this.forceText
+									? 'text-shadow: '
+									: 'box-shadow: '
+							}${shadow()} !important;
 				 }`;
 		} else {
 			let style = document.createElement('style');
@@ -201,7 +209,11 @@ class FlatShadow {
 			style.textContent = `[data-fsid="${this.fsid}"]${
 				this.hover ? ':hover' : ''
 			}{
-						 ${this.isTextNode ? 'text-shadow: ' : 'box-shadow: '}${shadow()} !important;
+						 ${
+								this.isTextNode || this.forceText
+									? 'text-shadow: '
+									: 'box-shadow: '
+							}${shadow()} !important;
 				 }`;
 			document.querySelector('body').appendChild(style);
 		}
@@ -319,7 +331,7 @@ class FlatShadow {
 	 * @param {number} step
 	 */
 
-	setStep(step) {
+	setStepSize(step) {
 		this.step = step;
 		this.renderShadow();
 	}
@@ -328,7 +340,7 @@ class FlatShadow {
 	 * @param {number} length
 	 */
 
-	length(length) {
+	setLength(length) {
 		this.shadowLength = length;
 		this.renderShadow();
 	}

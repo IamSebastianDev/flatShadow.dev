@@ -58,7 +58,27 @@
 				flatshadowstepsize="4"
 				flatshadowangle="30"
 			>
-				<h1>flat<span style="font-size: 2em;">S</span>hadow.js</h1>
+				<h1
+					class="flatShadow"
+					flatshadowColor="hsla(0, 45%, 40%, 1)"
+					flatshadowAngle="30"
+					flatshadowStepSize="4"
+					flatshadowBlur="2"
+					flatshadowLength="200"
+					flatshadowForceText="true"
+				>
+					flat<span
+						class="flatShadow"
+						flatshadowColor="hsla(0, 45%, 40%, 1)"
+						flatshadowAngle="30"
+						flatshadowStepSize="4"
+						flatshadowBlur="2"
+						flatshadowLength="200"
+						flatshadowForceText="true"
+						style="font-size: 2em;"
+						>S</span
+					>hadow.js
+				</h1>
 			</div>
 
 			<div class="hero-LinksContainer">
@@ -103,11 +123,11 @@
 						<span>
 							&lt;script
 							<span style="color: steelblue;">src=</span
-							><span style="color: indianred;"
+							><span style="color: crimson;"
 								>"https://flatshadow.now.sh/dist/flatShadow.min.js"</span
 							>&gt;&lt;/script&gt;
 						</span>
-						<button onlick="copy()">
+						<button id="copyButton">
 							<img src="assets/icon/copy.svg" />
 							<span>Copy.</span>
 						</button>
@@ -125,7 +145,7 @@
 					<div>
 						<span>
 							&lt;h1 <span style="color: steelblue;">class=</span
-							><span style="color: indianred;">"flatShadow"</span
+							><span style="color: crimson;">"flatShadow"</span
 							>&gt;I'll have a shadow!&lt;/h1&gt;</span
 						>
 					</div>
@@ -140,34 +160,295 @@
 						<span>
 							&lt;h1
 							<span style="color: steelblue;">class=</span
-							><span style="color: indianred;">"flatShadow"</span>
+							><span style="color: crimson;">"flatShadow"</span>
 							<span style="color: steelblue;"
 								>flatShadowAngle=</span
-							><span style="color: indianred;">"45deg"</span>
+							><span style="color: crimson;">"45deg"</span>
 							<span style="color: steelblue;"
 								>flatShadowBlur=</span
-							><span style="color: indianred;">"4"</span>&gt;
+							><span style="color: crimson;">"4"</span>&gt;
 						</span>
 					</div>
 				</div>
+				<div class="create-Code">
+					<p>
+						You can also add a Shadow using Javascript:
+					</p>
+					<div>
+						<span>
+							<strong>let</strong> shadow = <strong>new</strong>
+							<span style="color: crimson">FlatShadow</span>(<span
+								style="color: steelblue"
+								>document</span
+							>.<span style="color: crimson">querySelector</span
+							>(<span style="color: seagreen">"add-shadow"</span
+							>))
+						</span>
+					</div>
+				</div>
+				<div class="create-Code">
+					<p>
+						Shadows added with Javascript can be styled with an
+						optional Object. The keys are identical to the HTML
+						attributes, just without the "flatShadow"-prefix:
+					</p>
+					<div>
+						<span>
+							<strong>let</strong> options = {<br />
+							&nbsp;&nbsp;
+							<span style="color: crimson">angle</span>:<span
+								style="color: seagreen"
+								>"45deg"</span
+							>,<br />
+							&nbsp;&nbsp;
+							<span style="color: crimson">length</span>:<span
+								style="color: steelblue"
+							>
+								100</span
+							>,<br />
+							&nbsp;&nbsp;
+							<span style="color: crimson">enableTracking</span
+							>:<span style="color: purple"> true</span>,<br />
+							&nbsp;}<br />
+							<br />
+
+							<strong>let</strong> shadow = <strong>new</strong>
+							<span style="color: crimson">FlatShadow</span>(<span
+								style="color: steelblue"
+								>document</span
+							>.<span style="color: crimson">querySelector</span
+							>(<span style="color: seagreen">"add-shadow"</span
+							>), options)
+						</span>
+					</div>
+					<p>
+						FlatShadow.js has zero dependencies and is minified just
+						5kbs is size. You can not only create the typical flat
+						shadows with it, but pretty much every kind of shadow.
+						It's also under a
+						<a
+							target="_blank"
+							href="https://opensource.org/licenses/MIT"
+							>MIT-Licence</a
+						>, so you're free to play with it.
+					</p>
+				</div>
 			</div>
 		</div>
+		<main class="container attributes-Container">
+			<section id="attributes" class="attributes-Wrapper">
+				<h1>Attributes</h1>
+				<p>
+					Attributes are used to style the <i>Shadow</i>. There are
+					three different ways to style the <i>Shadows</i>, depending
+					on how you create the Shadow. You can use custom
+					<strong>HTML-Attributes</strong>, a
+					<strong>options catalouge</strong> when creating the
+					<i>Shadow</i> with JavaScript, or use the provided
+					<strong>Methods</strong> directly on the created
+					<i>Shadow</i> object. Mixing and matching is possible, which
+					makes <strong>flatShadow</strong> super flexible.
+				</p>
+			</section>
+			<section id="angle" class="attributes-Wrapper attributes-Example">
+				<h1>Angle</h1>
+				<span class="attributes-Selector"
+					><span style="color: steelblue">flatshadowAngle</span>=<span
+						style="color: crimson"
+						>"45deg"</span
+					></span
+				>
+				<span class="attributes-Selector"
+					>{<span style="color: crimson">angle</span>:
+					<span style="color: seagreen">"45deg"</span>}</span
+				>
+				<span class="attributes-Selector"
+					>shadow.<span style="color: crimson">setAngle</span>(<span
+						style="color: seagreen"
+						>"45deg"</span
+					>)</span
+				>
+				<p class="attributes-Desc">
+					The angle attribute describes the angle of the shadow. 0° is
+					straigt down, 180° is straight up. The default angle is
+					45deg.
+				</p>
+			</section>
+			<section id="length" class="attributes-Wrapper attributes-Example">
+				<h1>Length</h1>
+				<span class="attributes-Selector"
+					><span style="color: steelblue">flatshadowLength</span
+					>=<span style="color: crimson">"1000"</span></span
+				>
+				<span class="attributes-Selector"
+					>{<span style="color: crimson">length</span>:
+					<span style="color: steelblue">1000</span>}</span
+				>
+				<span class="attributes-Selector"
+					>shadow.<span style="color: crimson">setLength</span>(<span
+						style="color: steelblue"
+						>1000</span
+					>)</span
+				>
+				<p class="attributes-Desc">
+					The length attributes sets the number of steps for the
+					shadow. The more steps, the longer the shadow will be. The
+					default is 1000 steps. If you're having trouble with
+					perfomance, this is one of the first attributes you should
+					lower.
+				</p>
+			</section>
+			<section id="step" class="attributes-Wrapper attributes-Example">
+				<h1>Step Size</h1>
+				<span class="attributes-Selector"
+					><span style="color: steelblue">flatshadowStepSize</span
+					>=<span style="color: crimson">"2"</span></span
+				>
+				<span class="attributes-Selector"
+					>{<span style="color: crimson">stepSize</span>:
+					<span style="color: steelblue">2</span>}</span
+				>
+				<span class="attributes-Selector"
+					>shadow.<span style="color: crimson">setStepSize</span
+					>(<span style="color: steelblue">2</span>)</span
+				>
+				<p class="attributes-Desc">
+					The step size attribute sets the space between the
+					calculated steps. The default value is 1, which means about
+					1px per step. You can increase this to get a more stylistic
+					looking shadow or to increase perfomance.
+				</p>
+			</section>
+			<section id="blur" class="attributes-Wrapper attributes-Example">
+				<h1>Blur</h1>
+				<span class="attributes-Selector"
+					><span style="color: steelblue">flatshadowBlur</span>=<span
+						style="color: crimson"
+						>"0"</span
+					></span
+				>
+				<span class="attributes-Selector"
+					>{<span style="color: crimson">blur</span>:
+					<span style="color: steelblue">0</span>}</span
+				>
+				<span class="attributes-Selector"
+					>shadow.<span style="color: crimson"
+						>setBlur</span >(<span style="color: steelblue">0</span
+						>)</span
+					></span
+				>
+				<p class="attributes-Desc">
+					The blur attribute describes the blur radius of the shadow,
+					or the softness. The default is 0, this creates a sharp
+					shadow.
+				</p>
+			</section>
+			<section id="color" class="attributes-Wrapper attributes-Example">
+				<h1>Color</h1>
+				<span class="attributes-Selector"
+					><span style="color: steelblue">flatshadowColor</span>=<span
+						style="color: crimson"
+						>"rgba(0,0,0,0.3)"</span
+					></span
+				>
+				<span class="attributes-Selector"
+					>{<span style="color: crimson">color</span>:
+					<span style="color: seagreen">"rgba(0,0,0,0.3)"</span
+					>}</span
+				>
+				<span class="attributes-Selector"
+					>shadow.<span style="color: crimson"
+						>setColor</span >(<span style="color: seagreen"
+							>"rgba(0,0,0,0.3)"</span
+						>)</span
+					></span
+				>
+				<p class="attributes-Desc">
+					You can use the color attribute to set the color of the shadow. Usually flatShadow will try to extract the color of the Parent element and make it slightly darker, but this depends on the parent element having a background color. Sometimes you also just want to have a darker or lighter or just different color. You can use any color system you like. 
+				</p>
+			</section>
+			<section id="hover" class="attributes-Wrapper attributes-Example">
+				<h1>Hover</h1>
+				<span class="attributes-Selector"
+					><span style="color: steelblue">flatshadowHover</span>=<span
+						style="color: crimson"
+						>"false"</span
+					></span
+				>
+				<span class="attributes-Selector"
+					>{<span style="color: crimson">hover</span>:
+					<span style="color: purple">false</span
+					>}</span
+				>
+				<span class="attributes-Selector"
+					>shadow.<span style="color: crimson"
+						>setHover</span >(<span style="color: purple"
+							>false</span
+						>)</span
+					></span
+				>
+				<p class="attributes-Desc">
+					Set the hover attribute to true to have the shadow only appear on a hover. The default is false.
+				</p>
+			</section>
+			<section id="tracking" class="attributes-Wrapper attributes-Example">
+				<h1>Tracking shadows</h1>
+				<span class="attributes-Selector"
+					><span style="color: steelblue">flatshadowEnableTracking</span>=<span
+						style="color: crimson"
+						>"false"</span
+					></span
+				>
+				<span class="attributes-Selector"
+					>{<span style="color: crimson">enableTracking</span>:
+					<span style="color: purple">false</span
+					>}</span
+				>
+				
+				<p class="attributes-Desc">
+					Enable tracking to have the shadow angle follow the mouse. This gives the impression that your mouse cursor is the source of light for the shadow. This attribute is very perfomance hungry, experiment with step size and shadow length to get a smooth result. This is disabled by default, and will not work even if set to true on mobile and touch devices. 
+				</p>
+			</section>
+			<section id="logging" class="attributes-Wrapper attributes-Example">
+				<h1>Logging the shadow</h1>
+				<span class="attributes-Selector"
+					><span style="color: steelblue">flatshadowEnableLogging</span>=<span
+						style="color: crimson"
+						>"false"</span
+					></span
+				>
+				<span class="attributes-Selector"
+					>{<span style="color: crimson">enableLogging</span>:
+					<span style="color: purple">false</span
+					>}</span
+				>
+				
+				<p class="attributes-Desc">
+					This attribute will, when set to true, cause the created shadow object to be loggeg to the console. You can use this to look at the properties, or to debug if something is not going as planned. This is disabled by default.
+				</p>
+			</section>
+			<section id="forceText" class="attributes-Wrapper attributes-Example">
+				<h1>Force a text shadow</h1>
+				<span class="attributes-Selector"
+					><span style="color: steelblue">flatshadowForceText</span>=<span
+						style="color: crimson"
+						>"false"</span
+					></span
+				>
+				<span class="attributes-Selector"
+					>{<span style="color: crimson">forceText</span>:
+					<span style="color: purple">false</span
+					>}</span
+				>
+				
+				<p class="attributes-Desc">
+					FlatShadow will try to detect if the shadow should be a box or a text shadow. Sometimes this is not intended, or fails. You can use this method to force a text shadow on an element. This is disabled by default.
+				</p>
+			</section>
+		</main>
+		<footer>
+
+		</footer>
 	</body>
 </html>
 <script src="./scripts/main.js"></script>
-<script>
-	const copy = () => {
-		let string = 'src="https://flatshadow.now.sh/dist/flatShadow.min.js">';
-
-		let data = [
-			new ClipboardItem({
-				'text/plain': new Blob(
-					["<script src='" + string + "'><%2fscript>"],
-					{ type: 'text/plain' }
-				)
-			})
-		];
-
-		navigator.clipboard.write(data);
-	};
-</script>

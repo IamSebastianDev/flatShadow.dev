@@ -26,7 +26,8 @@ body {
 p,
 a {
 	font-family: 'roboto', sans-serif;
-	font-size: 1.4rem;
+	font-size: 1.6rem;
+	line-height: 2.2rem;
 }
 
 .container {
@@ -74,6 +75,8 @@ a {
 	cursor: pointer;
 
 	transition: 0.3s ease;
+
+	background: var(--colorLight);
 }
 
 .nav-Button img {
@@ -149,10 +152,13 @@ a {
 	font-weight: 300;
 
 	border-radius: 15px;
+
+	overflow: hidden;
 }
 
 .hero-TitleContainer h1 {
 	margin: 10px;
+	letter-spacing: 20px;
 }
 
 .hero-LinksContainer {
@@ -186,11 +192,7 @@ a {
 	margin: 10px 10px;
 	border-radius: 5px;
 
-	transition: 0.3s ease;
-}
-
-.hero-LinksContainer a:hover {
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
 }
 
 .hero-LinksContainer p {
@@ -263,7 +265,7 @@ a {
 
 	width: 100%;
 
-	padding: 10px 15px;
+	padding: 20px 15px;
 	border-radius: 5px;
 
 	display: flex;
@@ -272,7 +274,7 @@ a {
 }
 
 .create-Code button {
-	height: 40px;
+	height: 20px;
 	max-width: 40px;
 
 	display: flex;
@@ -303,7 +305,7 @@ a {
 }
 
 .create-Code button img {
-	margin: 10px 10px;
+	margin: 0 10px;
 	height: 20px;
 	width: 20px;
 }
@@ -317,4 +319,65 @@ a {
 
 .create-Code a {
 	color: var(--colorLight);
+}
+
+/* attributes */
+
+.attributes-Container {
+	background: var(--color);
+	color: var(--colorLight);
+	padding: 20px 0px 140px;
+}
+
+.attributes-Wrapper {
+	padding: 40px 0 40px 0;
+	width: 50%;
+	margin: auto;
+	max-width: 768px;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.attributes-Container h1 {
+	font-size: 4em;
+	width: 100%;
+
+	margin: 10px 0px;
+	font-weight: 300;
+}
+
+.attributes-Example {
+	background: var(--colorLight);
+	color: var(--colorDark);
+	padding: 20px 30px;
+	margin: 20px 0;
+
+	border-radius: 5px;
+
+	box-shadow: 0px 2px 4px inset rgba(0, 0, 0, 0.3);
+}
+
+.attributes-Selector {
+	margin: 5px 10px 5px 0px;
+	padding: 14px 12px;
+
+	background: var(--colorLight);
+	color: var(--colorDark);
+
+	border-radius: 5px;
+
+	font-family: monospace;
+	font-size: 1.4rem;
+
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* footer */
+
+footer {
+	height: 400px;
+	background: var(--colorDark);
 }
