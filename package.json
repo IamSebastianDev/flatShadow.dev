@@ -1,0 +1,20 @@
+{
+	"type": "module",
+	"name": "flatshadowsjs",
+	"version": "1.0.0",
+	"description": "Project page for flatShadows.js",
+	"main": "main.mjs",
+	"scripts": {
+		"start": "node -r esm main.mjs",
+		"dev": "nodemon -r esm main.mjs"
+	},
+	"author": "Sebastian Heinz",
+	"license": "MIT",
+	"devDependencies": {
+		"nodemon": "^2.0.2"
+	},
+	"dependencies": {
+		"esm": "^3.2.25",
+		"express": "^4.17.1"
+	}
+}

@@ -1,0 +1,105 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>FlatShadows.js | Small JS Library for stylistic shadows</title>
+		<link rel="stylesheet" href="./styles/style.css" />
+		<script src="flatShadow.js"></script>
+	</head>
+	<body>
+		<nav class="nav-Bar">
+			<button
+				class="nav-Button flatShadow"
+				flatshadowhover="true"
+				flatshadowcolor="rgba(235,235,235,1)"
+				flatshadowlength="5"
+				flatshadowblur="5"
+				flatshadowangle="0"
+			>
+				<img src="./assets/icon/menu.svg" />
+			</button>
+			<a
+				class="nav-Button flatShadow"
+				flatshadowhover="true"
+				flatshadowcolor="rgba(235,235,235,1)"
+				flatshadowlength="5"
+				flatshadowblur="5"
+				flatshadowangle="0"
+				target_blank
+				href="https://github.com/monsterteddy"
+				><img src="./assets/icon/github.svg"
+			/></a>
+			<a
+				class="nav-Button flatShadow"
+				flatshadowhover="true"
+				flatshadowcolor="rgba(235,235,235,1)"
+				flatshadowlength="5"
+				flatshadowblur="5"
+				flatshadowangle="0"
+				target="_blank"
+				href="https://twitter.com/monsterteddy"
+				><img src="./assets/icon/twitter.svg"
+			/></a>
+		</nav>
+
+		<div class="scroll-Container">
+			<p>scroll</p>
+			<img src="assets/icon/chevron-down.svg" />
+		</div>
+		<main class="hero">
+			<div
+				class="hero-TitleContainer flatShadow"
+				flatshadowstepsize="4"
+				flatshadowangle="30"
+			>
+				<h1>flat<span style="font-size: 2em;">S</span>hadow.js</h1>
+			</div>
+
+			<div class="hero-LinksContainer">
+				<p>Learn more about the properties.</p>
+				<a href="#creating">Creating a Shadow</a>
+				<a href="#angle">Angle</a>
+				<a href="#length">Length</a>
+				<a href="#step">Step</a>
+				<a href="#blur">Blur</a>
+				<a href="#color">Color</a>
+				<a href="#hover">Hover</a>
+				<a href="#tracking">Tracking</a>
+				<a href="#logging">Logging</a>
+				<a href="#forceText">Force Text Shadow</a>
+			</div>
+		</main>
+		<div id="creating" class="container create-Container">
+			<div class="create-Wrapper">
+				<h1>Get flatShadow</h1>
+				<a
+					download
+					href="flatShadow.min.js"
+					class="flatShadow"
+					flatshadowHover="true"
+					flatshadowColor="hsla(0, 45%, 30%, 1)"
+					>Download the minified file.</a
+				>
+				<a
+					target="_blank"
+					href=""
+					class="flatShadow"
+					flatshadowHover="true"
+					flatshadowColor="hsla(0, 45%, 30%, 1)"
+					>Fork from GitHub.</a
+				>
+				<div class="create-Code">
+					<p>Or include this link in your project.</p>
+					<pre>
+				<code>
+&lt;script src=""&gt;&lt;/script&gt;</code>
+			</pre>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="./scripts/main.js"></script>
