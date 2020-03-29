@@ -331,6 +331,7 @@ a {
 	color: var(--colorDark);
 
 	font: 1.4rem monospace;
+	line-height: 1.8rem;
 
 	width: 100%;
 
@@ -447,7 +448,7 @@ a {
 /* footer */
 
 footer {
-	height: 400px;
+	height: 100px;
 	background: var(--colorDark);
 
 	display: flex;
@@ -459,28 +460,6 @@ footer {
 	font: 2rem 'roboto', sans-serif;
 	font-weight: 100;
 	text-align: center;
-}
-
-footer a {
-	padding: 16px 24px;
-	margin: 20px 10px 20px 0;
-
-	background: var(--colorLight);
-	color: var(--colorDark);
-
-	font-size: 2.4rem;
-	font-weight: 500;
-
-	text-decoration: none;
-
-	border-radius: 5px;
-
-	overflow: hidden;
-}
-
-footer a:hover {
-	background: var(--color);
-	color: var(--colorLight);
 }
 
 /* examples */
@@ -676,9 +655,5 @@ footer a:hover {
 	.attributes-Wrapper {
 		width: 94%;
 		margin: 10px 3%;
-	}
-
-	footer a {
-		font-size: 2rem;
 	}
 }
