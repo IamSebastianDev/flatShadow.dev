@@ -46,7 +46,7 @@ const copy = () => {
 		data.style =
 			'display: hidden; position: fixed: top: 0; left: 0; z-index: -1000; visibilty: none;';
 		document.querySelector('body').appendChild(data);
-		data.value = "<script src='" + src + "'><" + 'script>';
+		data.value = "<script src='" + src + "'></" + 'script>';
 
 		data.focus();
 		data.select();
