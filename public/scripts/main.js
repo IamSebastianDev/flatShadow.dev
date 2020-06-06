@@ -66,10 +66,10 @@ let menu = document.querySelector('.nav-Menu ul');
 window.addEventListener('click', event => {
 	if (event.target.closest('.nav-Button')) {
 		menu.style.transform = 'translateY(0)';
-		document.querySelector('body').style.overflowY = 'hidden';
+		document.querySelector('html').style.overflowY = 'hidden';
 	}
 	if (event.target.closest('.nav-ButtonClose')) {
 		menu.style.transform = 'translateY(-100%)';
-		document.querySelector('body').style.overflowY = 'auto';
+		document.querySelector('html').style.overflowY = 'auto';
 	}
 });
