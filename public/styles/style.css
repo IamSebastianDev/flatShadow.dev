@@ -448,7 +448,7 @@ a {
 /* footer */
 
 footer {
-	height: 100px;
+	min-height: 100px;
 	background: var(--colorDark);
 
 	display: flex;
@@ -460,6 +460,18 @@ footer {
 	font: 2rem 'roboto', sans-serif;
 	font-weight: 100;
 	text-align: center;
+}
+
+footer a {
+	color: var(--colorLight);
+	font: 2rem 'roboto', sans-serif;
+	font-weight: 100;
+	text-align: center;
+	text-decoration: none;
+}
+
+footer a:hover {
+	color: var(--color);
 }
 
 /* examples */

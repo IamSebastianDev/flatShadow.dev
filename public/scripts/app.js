@@ -4,18 +4,19 @@
 let linkList = document.querySelectorAll('.hero-LinksContainer a');
 
 linkList.forEach(
-	link =>
+	(link) =>
 		new FlatShadow(link, {
 			angle: 30,
 			length: 50,
 			color: 'hsla(0, 45%, 30%, 1)',
-			hover: true
+			hover: true,
+			forceText: true,
 		})
 );
 
 // function to copy the src link to the clipboard
 
-window.addEventListener('click', event => {
+window.addEventListener('click', (event) => {
 	if (event.target.closest('#copyButton')) {
 		copy();
 	}
@@ -30,10 +31,10 @@ const copy = () => {
 				'text/plain': new Blob(
 					["<script src='" + src + "'><" + 'script>'],
 					{
-						type: 'text/plain'
+						type: 'text/plain',
 					}
-				)
-			})
+				),
+			}),
 		];
 
 		navigator.clipboard.write(data);
@@ -63,7 +64,7 @@ const copy = () => {
 
 let menu = document.querySelector('.nav-Menu ul');
 
-window.addEventListener('click', event => {
+window.addEventListener('click', (event) => {
 	if (event.target.closest('.nav-Button')) {
 		menu.style.transform = 'translateY(0)';
 		document.querySelector('html').style.overflowY = 'hidden';

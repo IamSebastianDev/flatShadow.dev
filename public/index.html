@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="./styles/style.css" />
 		<script
 			type="application/javascript"
-			src="./dist/flatShadow.js"
+			src="./dist/flatShadow.min.js"
 		></script>
 	</head>
 	<body>
@@ -26,7 +26,7 @@
 				<li><a href="./examples.html">Examples</a></li>
 				<li><button class="nav-ButtonClose">&times;</button></li>
 				<li>
-					<a target="_blank" href="https://github.com/monsterteddy"
+					<a target="_blank" rel="norefferer noopener" href="https://github.com/IamSebastianDev"
 						><img src="./assets/icon/github.svg"
 					/></a>
 				</li>
@@ -45,22 +45,23 @@
 		<div class="hero">
 			<div
 				class="hero-TitleContainer flatShadow"
-				flatshadow-stepsize="4"
+				flatshadow-stepsize="1"
 				flatshadow-angle="30"
 			>
 				<h1
 					class="flatShadow"
 					flatshadow-Color="hsla(0, 45%, 40%, 1)"
 					flatshadow-Angle="30"
-					flatshadow-StepSize="1"
+					flatshadow-step="1"
 					flatshadow-Blur="2"
 					flatshadow-Length="200"
 					flatshadow-ForceText="true"
+					
 				><span>f</span>lat<span
 						class="flatShadow"
 						flatshadow-Color="hsla(0, 45%, 40%, 1)"
 						flatshadow-Angle="30"
-						flatshadow-StepSize="1"
+						flatshadow-Step="1"
 						flatshadow-Blur="2"
 						flatshadowL-Length="200"
 						flatshadow-ForceText="true"
@@ -98,7 +99,7 @@
 				>
 				<a
 					target="_blank"
-					href="https://github.com/MonsterTeddy/flatShadow.js"
+					href="https://github.com/IamSebastianDev/flatShadow.js"
 					class="flatShadow create-Button"
 					flatshadow-Hover="true"
 					flatshadow-Length="40"
@@ -195,7 +196,7 @@
 								100</span
 							>,<br />
 							&nbsp;&nbsp;
-							<span style="color: crimson">enableTracking</span
+							<span style="color: crimson">trackingEnabled</span
 							>:<span style="color: purple"> true</span>,<br />
 							&nbsp;}<br />
 							<br />
@@ -237,7 +238,7 @@
 				</p>
 			</section>
 			<section id="angle" class="attributes-Wrapper attributes-Example">
-				<h1>Angle</h1>
+				<h1>Angle &lt;Number&gt;</h1>
 				<span class="attributes-Selector"
 					><span style="color: steelblue">flatshadow-Angle</span>=<span
 						style="color: crimson"
@@ -246,13 +247,13 @@
 				>
 				<span class="attributes-Selector"
 					>{<span style="color: crimson">angle</span>:
-					<span style="color: seagreen">"45deg"</span>}</span
+					<span style="color: steelblue">45</span>}</span
 				>
 				<span class="attributes-Selector"
-					>shadow.<span style="color: crimson">setAngle</span>(<span
-						style="color: seagreen"
-						>"45deg"</span
-					>)</span
+					>shadow.<span style="color: crimson">angle</span> = <span
+						style="color: steelblue"
+						>45</span
+					></span
 				>
 				<p class="attributes-Desc">
 					The angle attribute describes the angle of the shadow. 0° is
@@ -261,9 +262,9 @@
 				</p>
 			</section>
 			<section id="length" class="attributes-Wrapper attributes-Example">
-				<h1>Length</h1>
+				<h1>Length &lt;Number&gt;</h1>
 				<span class="attributes-Selector"
-					><span style="color: steelblue">flatshadow-Length</span
+					><span style="color: steelblue">flatshadow-shadowlength</span
 					>=<span style="color: crimson">"1000"</span></span
 				>
 				<span class="attributes-Selector"
@@ -271,10 +272,10 @@
 					<span style="color: steelblue">1000</span>}</span
 				>
 				<span class="attributes-Selector"
-					>shadow.<span style="color: crimson">setLength</span>(<span
+					>shadow.<span style="color: crimson">length</span> = <span
 						style="color: steelblue"
 						>1000</span
-					>)</span
+					></span
 				>
 				<p class="attributes-Desc">
 					The length attributes sets the number of steps for the
@@ -285,18 +286,18 @@
 				</p>
 			</section>
 			<section id="step" class="attributes-Wrapper attributes-Example">
-				<h1>Step Size</h1>
+				<h1>Step Size  &lt;Number&gt;</h1>
 				<span class="attributes-Selector"
-					><span style="color: steelblue">flatshadow-StepSize</span
+					><span style="color: steelblue">flatshadow-step</span
 					>=<span style="color: crimson">"2"</span></span
 				>
 				<span class="attributes-Selector"
-					>{<span style="color: crimson">stepSize</span>:
+					>{<span style="color: crimson">step</span>:
 					<span style="color: steelblue">2</span>}</span
 				>
 				<span class="attributes-Selector"
-					>shadow.<span style="color: crimson">setStepSize</span
-					>(<span style="color: steelblue">2</span>)</span
+					>shadow.<span style="color: crimson">step</span
+					> = <span style="color: steelblue">2</span></span
 				>
 				<p class="attributes-Desc">
 					The step size attribute sets the space between the
@@ -306,9 +307,9 @@
 				</p>
 			</section>
 			<section id="blur" class="attributes-Wrapper attributes-Example">
-				<h1>Blur</h1>
+				<h1>Blur  &lt;Number&gt;</h1>
 				<span class="attributes-Selector"
-					><span style="color: steelblue">flatshadow-Blur</span>=<span
+					><span style="color: steelblue">flatshadow-blur</span>=<span
 						style="color: crimson"
 						>"0"</span
 					></span
@@ -319,8 +320,8 @@
 				>
 				<span class="attributes-Selector"
 					>shadow.<span style="color: crimson"
-						>setBlur</span >(<span style="color: steelblue">0</span
-						>)</span
+						>blur</span> = <span style="color: steelblue">0</span
+						></span
 					></span
 				>
 				<p class="attributes-Desc">
@@ -330,9 +331,9 @@
 				</p>
 			</section>
 			<section id="color" class="attributes-Wrapper attributes-Example">
-				<h1>Color</h1>
+				<h1>Color  &lt;String&gt;</h1>
 				<span class="attributes-Selector"
-					><span style="color: steelblue">flatshadow-Color</span>=<span
+					><span style="color: steelblue">flatshadow-color</span>=<span
 						style="color: crimson"
 						>"rgba(0,0,0,0.3)"</span
 					></span
@@ -344,9 +345,9 @@
 				>
 				<span class="attributes-Selector"
 					>shadow.<span style="color: crimson"
-						>setColor</span >(<span style="color: seagreen"
+						>color</span > = <span style="color: seagreen"
 							>"rgba(0,0,0,0.3)"</span
-						>)</span
+						></span
 					></span
 				>
 				<p class="attributes-Desc">
@@ -354,9 +355,9 @@
 				</p>
 			</section>
 			<section id="hover" class="attributes-Wrapper attributes-Example">
-				<h1>Hover</h1>
+				<h1>Hover  &lt;Boolean&gt;</h1>
 				<span class="attributes-Selector"
-					><span style="color: steelblue">flatshadow-Hover</span>=<span
+					><span style="color: steelblue">flatshadow-hover</span>=<span
 						style="color: crimson"
 						>"false"</span
 					></span
@@ -368,9 +369,9 @@
 				>
 				<span class="attributes-Selector"
 					>shadow.<span style="color: crimson"
-						>setHover</span >(<span style="color: purple"
+						>hover</span > = <span style="color: purple"
 							>false</span
-						>)</span
+						></span
 					></span
 				>
 				<p class="attributes-Desc">
@@ -378,15 +379,15 @@
 				</p>
 			</section>
 			<section id="tracking" class="attributes-Wrapper attributes-Example">
-				<h1>Tracking shadows</h1>
+				<h1>trackingEnabled &lt;Boolean&gt;</h1>
 				<span class="attributes-Selector"
-					><span style="color: steelblue">flatshadow-EnableTracking</span>=<span
+					><span style="color: steelblue">flatshadow-trackingenabled</span>=<span
 						style="color: crimson"
 						>"false"</span
 					></span
 				>
 				<span class="attributes-Selector"
-					>{<span style="color: crimson">enableTracking</span>:
+					>{<span style="color: crimson">trackingEnabled</span>:
 					<span style="color: purple">false</span
 					>}</span
 				>
@@ -395,28 +396,10 @@
 					Enable tracking to have the shadow angle follow the mouse. This gives the impression that your mouse cursor is the source of light for the shadow. This attribute is very perfomance hungry, experiment with step size and shadow length to get a smooth result. This is disabled by default, and will not work even if set to true on mobile and touch devices. 
 				</p>
 			</section>
-			<section id="logging" class="attributes-Wrapper attributes-Example">
-				<h1>Logging the shadow</h1>
-				<span class="attributes-Selector"
-					><span style="color: steelblue">flatshadow-EnableLogging</span>=<span
-						style="color: crimson"
-						>"false"</span
-					></span
-				>
-				<span class="attributes-Selector"
-					>{<span style="color: crimson">enableLogging</span>:
-					<span style="color: purple">false</span
-					>}</span
-				>
-				
-				<p class="attributes-Desc">
-					This attribute will, when set to true, cause the created shadow object to be loggeg to the console. You can use this to look at the properties, or to debug if something is not going as planned. This is disabled by default.
-				</p>
-			</section>
 			<section id="forceText" class="attributes-Wrapper attributes-Example">
-				<h1>Force a text shadow</h1>
+				<h1>forceText &lt;Boolean&gt;</h1>
 				<span class="attributes-Selector"
-					><span style="color: steelblue">flatshadow-ForceText</span>=<span
+					><span style="color: steelblue">flatshadow-forcetext</span>=<span
 						style="color: crimson"
 						>"false"</span
 					></span
@@ -431,10 +414,28 @@
 					FlatShadow will try to detect if the shadow should be a box or a text shadow. Sometimes this is not intended, or fails. You can use this method to force a text shadow on an element. This is disabled by default.
 				</p>
 			</section>
+			<section id="logging" class="attributes-Wrapper attributes-Example">
+				<h1>Debug &lt;Boolean&gt;</h1>
+				<span class="attributes-Selector"
+					><span style="color: steelblue">flatshadow-debug</span>=<span
+						style="color: crimson"
+						>"false"</span
+					></span
+				>
+				<span class="attributes-Selector"
+					>{<span style="color: crimson">debug</span>:
+					<span style="color: purple">false</span
+					>}</span
+				>
+				
+				<p class="attributes-Desc">
+					This attribute will, when set to true, cause the created shadow object to be loggeg to the console. You can use this to look at the properties, or to debug if something is not going as planned. This is disabled by default.
+				</p>
+			</section>
 		</main>
 		<footer>
-			<span>&copy; 2020 Sebastian Heinz</span>
+			<span>&copy; 2021 <a href="https://iamsebastian.dev" rel="norefferer noopener" target="_blank">Sebastian Heinz</a></span>
 		</footer>
+		<script src="./scripts/app.js"></script>
 	</body>
 </html>
-<script src="./scripts/main.js"></script>
