@@ -5,8 +5,8 @@
 	"description": "Project page for flatShadows.js",
 	"main": "main.mjs",
 	"scripts": {
-		"start": "node -r esm main.mjs",
-		"dev": "nodemon -r esm main.mjs"
+		"start": "node main.mjs",
+		"dev": "nodemon main.mjs"
 	},
 	"author": "Sebastian Heinz",
 	"license": "MIT",
